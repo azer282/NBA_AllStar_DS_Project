@@ -1,0 +1,102 @@
+{
+  "source": "Kaggle",
+  "dataset": "sumitrodatta/nba-aba-baa-stats",
+  "dataset_url": "https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats",
+  "version": 57,
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/sumitrodatta/nba-aba-baa-stats?datasetVersionNumber=57",
+  "license": "CC0: Public Domain (Kaggle metadata; data scraped from Basketball-Reference)",
+  "downloaded_at_utc": "2026-11-25T17:47:54+00:00",
+  "zip_file": "data/raw/nba-aba-baa-stats_v57.zip",
+  "zip_sha256": "a4e2baa37c837853cf10996168e70c6b93aca8bcb050da28bb7a304d36c4bc74",
+  "extracted_dir": "data/raw/nba-aba-baa-stats_v57",
+  "files": {
+    "Advanced.csv": {
+      "bytes": 4688879,
+      "sha256": "bae5d07639311301353f18abcde1b2582d21b0caed394a04fbe7a3b253277002"
+    },
+    "All-Star Selections.csv": {
+      "bytes": 90558,
+      "sha256": "0638a940f8e40aacb2a51e7314e7fe6ba964892cd1323bc5f0ec93a003251069"
+    },
+    "Draft Pick History.csv": {
+      "bytes": 456643,
+      "sha256": "2730ea9ca01bb2b06e43a1cf21326d784c44d892c3bc05565b9c27f75407a464"
+    },
+    "End of Season Teams (Voting).csv": {
+      "bytes": 324341,
+      "sha256": "5b688eee3a1e6500d0763973f91c1db113d4c9b6a654ef44dd5ebd6331d8faa1"
+    },
+    "End of Season Teams.csv": {
+      "bytes": 108765,
+      "sha256": "865a9f6aace7566ff36316dfcf4b36ffdbc30700f5b69577817d1012e34d0e7c"
+    },
+    "Opponent Stats Per 100 Poss.csv": {
+      "bytes": 219820,
+      "sha256": "761ac112c0a9d5a0b08ae520a79309fc9725600c59fe77ecd871e5bf54ea7800"
+    },
+    "Opponent Stats Per Game.csv": {
+      "bytes": 273447,
+      "sha256": "d819e5e72d5437181c8de4f364dbac6d85d46ec972e138e90babeb0a9661ea49"
+    },
+    "Opponent Totals.csv": {
+      "bytes": 276446,
+      "sha256": "16b95fa83f2b27e793bb5a1466324dae546777077176ec2316deb4b472cd36b9"
+    },
+    "Per 100 Poss.csv": {
+      "bytes": 4292546,
+      "sha256": "25cf27fa5c78dd0b6558565a038909f429b5dfe30842ef5093b16590087a2085"
+    },
+    "Per 36 Minutes.csv": {
+      "bytes": 4648295,
+      "sha256": "e4bb7605f91a0ecdd629f6f0ec9f17c2c3053c572a4abf482a6ebe52f2593bed"
+    },
+    "Player Award Shares.csv": {
+      "bytes": 210382,
+      "sha256": "2d7b59bfce52548467d4071c7bb242e6bf098e73e5b2f5d74b904b8d4001e643"
+    },
+    "Player Career Info.csv": {
+      "bytes": 515354,
+      "sha256": "3882c9d6624bbf8cd7e22407bfa5c7738b3f65fd85727f3677e09db79973ac03"
+    },
+    "Player Per Game.csv": {
+      "bytes": 4746314,
+      "sha256": "2f7e65f9cc43dd3399e011f55c926ba19ae1407a7659e9f5c5b475cac9175789"
+    },
+    "Player Play By Play.csv": {
+      "bytes": 1816768,
+      "sha256": "8a9d0967db7cfedf8494d079ee5550915e8cbf6224399fc33a672b9611376121"
+    },
+    "Player Season Info.csv": {
+      "bytes": 1499970,
+      "sha256": "3e1aadae42322b0eacef078d436cd61de0ad0e8e4ee8fa8aecb568dbd90d2b12"
+    },
+    "Player Shooting.csv": {
+      "bytes": 2927798,
+      "sha256": "7cb9d90ddde154eda7ccadbc541e1119969959695fb5b29ca26fee67eb8f10a6"
+    },
+    "Player Totals.csv": {
+      "bytes": 4544007,
+      "sha256": "2954bc4acb2651f6989304ab1a6d79f3ec710195b828c922510bc1250928b316"
+    },
+    "Team Abbrev.csv": {
+      "bytes": 65775,
+      "sha256": "34bb3c13ce67b169e686e64c2260c1fae5470b0f1e79698b8b85b26c545660b6"
+    },
+    "Team Stats Per 100 Poss.csv": {
+      "bytes": 219707,
+      "sha256": "7ccc8291e80f320b0624a290fb88fffd11b0a666d587edf58a6208d2566071c7"
+    },
+    "Team Stats Per Game.csv": {
+      "bytes": 279625,
+      "sha256": "96fbdd4df73bac716f057ac664ce9af490f8fa375c5294f4b54ed19e595915dc"
+    },
+    "Team Summaries.csv": {
+      "bytes": 339686,
+      "sha256": "930eb3114acc22c084977e1b337b1e1e99d0e7487c76767f39b109ff5084b936"
+    },
+    "Team Totals.csv": {
+      "bytes": 282614,
+      "sha256": "b4caeb0cb52cdb4d5d88f340f05f7738a1cf2f35efebdca9000fc7f34d91fe35"
+    }
+  }
+}

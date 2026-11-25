@@ -1,0 +1,488 @@
+file,column,verdict,reason_key,reason
+Advanced.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Advanced.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Advanced.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Advanced.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Advanced.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Advanced.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Advanced.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Advanced.csv,g,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Advanced.csv,gs,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Advanced.csv,mp,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,per,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,ts_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,x3p_ar,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,f_tr,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,orb_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,drb_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,trb_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,ast_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,stl_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,blk_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,tov_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,usg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,ows,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,dws,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,ws,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,ws_48,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,obpm,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,dbpm,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,bpm,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Advanced.csv,vorp,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+All-Star Selections.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+All-Star Selections.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+All-Star Selections.csv,team,LEAKY,label_meta,"Exists only for selected players (All-Star team, injury-replaced flag): encodes the label itself."
+All-Star Selections.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+All-Star Selections.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+All-Star Selections.csv,replaced,LEAKY,label_meta,"Exists only for selected players (All-Star team, injury-replaced flag): encodes the label itself."
+Draft Pick History.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Draft Pick History.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Draft Pick History.csv,overall_pick,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Draft Pick History.csv,round,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Draft Pick History.csv,tm,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Draft Pick History.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Draft Pick History.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Draft Pick History.csv,college,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+End of Season Teams (Voting).csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+End of Season Teams (Voting).csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+End of Season Teams (Voting).csv,type,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,number_tm,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,position,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+End of Season Teams (Voting).csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+End of Season Teams (Voting).csv,age,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,pts_won,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,pts_max,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,share,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,x1st_tm,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,x2nd_tm,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams (Voting).csv,x3rd_tm,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+End of Season Teams.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+End of Season Teams.csv,type,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams.csv,number_tm,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+End of Season Teams.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+End of Season Teams.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+End of Season Teams.csv,position,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Opponent Stats Per 100 Poss.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Opponent Stats Per 100 Poss.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Opponent Stats Per 100 Poss.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Opponent Stats Per 100 Poss.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Opponent Stats Per 100 Poss.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Opponent Stats Per 100 Poss.csv,g,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,mp,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_fg_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_fga_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_x3p_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_x3pa_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_x3p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_x2p_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_x2pa_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_x2p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_ft_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_fta_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_ft_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_orb_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_drb_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_trb_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_ast_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_stl_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_blk_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_tov_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_pf_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per 100 Poss.csv,opp_pts_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Opponent Stats Per Game.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Opponent Stats Per Game.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Opponent Stats Per Game.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Opponent Stats Per Game.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Opponent Stats Per Game.csv,g,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,mp_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_fg_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_fga_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_x3p_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_x3pa_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_x3p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_x2p_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_x2pa_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_x2p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_ft_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_fta_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_ft_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_orb_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_drb_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_trb_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_ast_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_stl_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_blk_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_tov_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_pf_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Stats Per Game.csv,opp_pts_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Opponent Totals.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Opponent Totals.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Opponent Totals.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Opponent Totals.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Opponent Totals.csv,g,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,mp,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_fg,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_fga,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_x3p,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_x3pa,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_x3p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_x2p,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_x2pa,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_x2p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_ft,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_fta,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_ft_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_orb,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_drb,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_trb,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_ast,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_stl,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_blk,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_tov,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_pf,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Opponent Totals.csv,opp_pts,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Per 100 Poss.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Per 100 Poss.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Per 100 Poss.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Per 100 Poss.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Per 100 Poss.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Per 100 Poss.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Per 100 Poss.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Per 100 Poss.csv,g,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Per 100 Poss.csv,gs,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Per 100 Poss.csv,mp,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,fg_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,fga_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,x3p_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,x3pa_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,x3p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,x2p_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,x2pa_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,x2p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,e_fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,ft_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,fta_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,ft_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,orb_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,drb_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,trb_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,ast_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,stl_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,blk_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,tov_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,pf_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,pts_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,o_rtg,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 100 Poss.csv,d_rtg,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Per 36 Minutes.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Per 36 Minutes.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Per 36 Minutes.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Per 36 Minutes.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Per 36 Minutes.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Per 36 Minutes.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Per 36 Minutes.csv,g,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Per 36 Minutes.csv,gs,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Per 36 Minutes.csv,mp,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,fg_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,fga_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,x3p_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,x3pa_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,x3p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,x2p_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,x2pa_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,x2p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,e_fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,ft_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,fta_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,ft_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,orb_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,drb_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,trb_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,ast_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,stl_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,blk_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,tov_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,pf_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Per 36 Minutes.csv,pts_per_36_min,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Award Shares.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Player Award Shares.csv,award,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Player Award Shares.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Award Shares.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Award Shares.csv,age,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Player Award Shares.csv,first,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Player Award Shares.csv,pts_won,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Player Award Shares.csv,pts_max,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Player Award Shares.csv,share,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Player Award Shares.csv,winner,LEAKY,post_season,"Post-season votes/awards (MVP shares, All-NBA, All-Defense): decided after the season by voters who largely overlap with All-Star selection logic."
+Player Career Info.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Career Info.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Career Info.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Career Info.csv,ht_in_in,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Career Info.csv,wt,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Career Info.csv,birth_date,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Career Info.csv,colleges,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Career Info.csv,from,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Career Info.csv,to,LEAKY,career_future,"Uses information from future seasons (last season played, Hall of Fame induction, which is heavily driven by All-Star selections)."
+Player Career Info.csv,debut,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Career Info.csv,hof,LEAKY,career_future,"Uses information from future seasons (last season played, Hall of Fame induction, which is heavily driven by All-Star selections)."
+Player Per Game.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Player Per Game.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Player Per Game.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Per Game.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Per Game.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Per Game.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Player Per Game.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Per Game.csv,g,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Per Game.csv,gs,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Per Game.csv,mp_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,fg_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,fga_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,x3p_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,x3pa_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,x3p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,x2p_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,x2pa_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,x2p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,e_fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,ft_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,fta_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,ft_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,orb_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,drb_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,trb_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,ast_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,stl_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,blk_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,tov_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,pf_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Per Game.csv,pts_per_game,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Player Play By Play.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Player Play By Play.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Play By Play.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Play By Play.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Play By Play.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Player Play By Play.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Play By Play.csv,g,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Play By Play.csv,gs,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Play By Play.csv,mp,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,pg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,sg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,sf_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,pf_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,c_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,on_court_plus_minus_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,net_plus_minus_per_100_poss,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,bad_pass_turnover,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,lost_ball_turnover,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,shooting_foul_committed,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,offensive_foul_committed,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,shooting_foul_drawn,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,offensive_foul_drawn,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,points_generated_by_assists,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,and1,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Play By Play.csv,fga_blocked,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Season Info.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Player Season Info.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Player Season Info.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Season Info.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Season Info.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Season Info.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Player Season Info.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Season Info.csv,experience,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Shooting.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Player Shooting.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Player Shooting.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Shooting.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Shooting.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Shooting.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Player Shooting.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Shooting.csv,g,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Shooting.csv,gs,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Shooting.csv,mp,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,avg_dist_fga,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_fga_from_x2p_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_fga_from_x0_3_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_fga_from_x3_10_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_fga_from_x10_16_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_fga_from_x16_3p_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_fga_from_x3p_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,fg_percent_from_x2p_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,fg_percent_from_x0_3_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,fg_percent_from_x3_10_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,fg_percent_from_x10_16_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,fg_percent_from_x16_3p_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,fg_percent_from_x3p_range,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_assisted_x2p_fg,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_assisted_x3p_fg,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_dunks_of_fga,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,num_of_dunks,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,percent_corner_3s_of_3pa,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,corner_3_point_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,num_heaves_attempted,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Shooting.csv,num_heaves_made,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Player Totals.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Player Totals.csv,player,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Totals.csv,player_id,SUSPECT,identity,Player identity: needed as a join key but must NOT be a feature (a model could memorise past All-Stars by name/id).
+Player Totals.csv,age,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Totals.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Player Totals.csv,pos,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Player Totals.csv,g,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Totals.csv,gs,SUSPECT,games,Full-season games/starts: also reflects injuries after selection. Same prediction-time dependency as other season stats.
+Player Totals.csv,mp,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,fg,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,fga,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,x3p,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,x3pa,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,x3p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,x2p,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,x2pa,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,x2p_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,e_fg_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,ft,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,fta,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,ft_percent,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,orb,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,drb,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,trb,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,ast,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,stl,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,blk,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,tov,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,pf,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,pts,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Player Totals.csv,trp_dbl,SUSPECT,season_stat,Full-season aggregate: includes games played AFTER the All-Star selection (made mid-season). SAFE only if we predict at end of regular season; LEAKY if we predict at the All-Star break.
+Team Abbrev.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Team Abbrev.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Team Abbrev.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Team Abbrev.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Team Abbrev.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Team Stats Per 100 Poss.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Team Stats Per 100 Poss.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Team Stats Per 100 Poss.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Team Stats Per 100 Poss.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Team Stats Per 100 Poss.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Team Stats Per 100 Poss.csv,g,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,mp,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,fg_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,fga_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,x3p_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,x3pa_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,x3p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,x2p_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,x2pa_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,x2p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,ft_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,fta_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,ft_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,orb_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,drb_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,trb_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,ast_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,stl_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,blk_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,tov_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,pf_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per 100 Poss.csv,pts_per_100_poss,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Team Stats Per Game.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Team Stats Per Game.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Team Stats Per Game.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Team Stats Per Game.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Team Stats Per Game.csv,g,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,mp_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,fg_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,fga_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,x3p_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,x3pa_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,x3p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,x2p_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,x2pa_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,x2p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,ft_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,fta_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,ft_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,orb_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,drb_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,trb_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,ast_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,stl_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,blk_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,tov_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,pf_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Stats Per Game.csv,pts_per_game,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Team Summaries.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Team Summaries.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Team Summaries.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Team Summaries.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Team Summaries.csv,age,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,w,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,l,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,pw,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,pl,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,mov,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,sos,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,srs,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,o_rtg,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,d_rtg,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,n_rtg,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,pace,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,f_tr,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,x3p_ar,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,ts_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,e_fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,tov_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,orb_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,ft_fga,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,opp_e_fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,opp_tov_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,drb_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,opp_ft_fga,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Summaries.csv,arena,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Team Summaries.csv,attend,SUSPECT,attendance,"Full-season attendance: prediction-time dependent; weak, indirect signal."
+Team Summaries.csv,attend_g,SUSPECT,attendance,"Full-season attendance: prediction-time dependent; weak, indirect signal."
+Team Totals.csv,season,SAFE,key,Join key (season / league). Not a performance signal.
+Team Totals.csv,lg,SAFE,key,Join key (season / league). Not a performance signal.
+Team Totals.csv,team,SAFE,team_code,Team of the row. Value 'kTM' marks a traded player's combined row.
+Team Totals.csv,abbreviation,SAFE,pre_season,"Known before the season starts (bio, draft, experience, position)."
+Team Totals.csv,playoffs,LEAKY,playoffs,"Whether the team made the playoffs: decided after the regular season, i.e. after the All-Star selection."
+Team Totals.csv,g,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,mp,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,fg,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,fga,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,fg_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,x3p,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,x3pa,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,x3p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,x2p,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,x2pa,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,x2p_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,ft,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,fta,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,ft_percent,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,orb,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,drb,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,trb,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,ast,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,stl,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,blk,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,tov,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,pf,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."
+Team Totals.csv,pts,SUSPECT,team_stat,"Team full-season aggregate (record, ratings, pace): same prediction-time dependency; team success also influences coach votes."

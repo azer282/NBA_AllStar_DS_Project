@@ -1,0 +1,15 @@
+# Python / environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data: raw downloads and processed files are rebuilt by scripts, never committed
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Secrets (Kaggle API key must never be committed)
+kaggle.json
+.env

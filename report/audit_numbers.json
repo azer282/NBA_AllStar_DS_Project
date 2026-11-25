@@ -1,0 +1,713 @@
+{
+  "source": {
+    "dataset": "sumitrodatta/nba-aba-baa-stats",
+    "version": 57,
+    "zip_sha256": "a4e2baa37c837853cf10996168e70c6b93aca8bcb050da28bb7a304d36c4bc74",
+    "n_files": 22,
+    "license": "CC0: Public Domain (Kaggle metadata; data scraped from Basketball-Reference)"
+  },
+  "shapes": {
+    "Advanced.csv": [
+      33780,
+      30
+    ],
+    "All-Star Selections.csv": [
+      2058,
+      6
+    ],
+    "Draft Pick History.csv": [
+      8443,
+      8
+    ],
+    "End of Season Teams (Voting).csv": [
+      4484,
+      14
+    ],
+    "End of Season Teams.csv": [
+      2222,
+      7
+    ],
+    "Opponent Stats Per 100 Poss.csv": [
+      1492,
+      28
+    ],
+    "Opponent Stats Per Game.csv": [
+      1938,
+      28
+    ],
+    "Opponent Totals.csv": [
+      1938,
+      28
+    ],
+    "Per 100 Poss.csv": [
+      28133,
+      34
+    ],
+    "Per 36 Minutes.csv": [
+      32697,
+      32
+    ],
+    "Player Award Shares.csv": [
+      3465,
+      10
+    ],
+    "Player Career Info.csv": [
+      5467,
+      11
+    ],
+    "Player Per Game.csv": [
+      33780,
+      32
+    ],
+    "Player Play By Play.csv": [
+      18695,
+      26
+    ],
+    "Player Season Info.csv": [
+      33780,
+      8
+    ],
+    "Player Shooting.csv": [
+      18695,
+      32
+    ],
+    "Player Totals.csv": [
+      33780,
+      33
+    ],
+    "Team Abbrev.csv": [
+      1848,
+      5
+    ],
+    "Team Stats Per 100 Poss.csv": [
+      1492,
+      28
+    ],
+    "Team Stats Per Game.csv": [
+      1938,
+      28
+    ],
+    "Team Summaries.csv": [
+      1938,
+      31
+    ],
+    "Team Totals.csv": [
+      1938,
+      28
+    ]
+  },
+  "n_player_rows": 33780,
+  "season_min": 1947,
+  "season_max": 2027,
+  "rows_by_league": {
+    "NBA": 31560,
+    "ABA": 1638,
+    "BAA": 582
+  },
+  "label_rows": 2058,
+  "label_rows_by_league": {
+    "NBA": 1850,
+    "ABA": 208
+  },
+  "label_season_min": 1951,
+  "label_season_max": 2026,
+  "player_tables_same_row_keys": true,
+  "missing_structural": {
+    "n_columns_with_missing": 41,
+    "cells_missing": 159669,
+    "cells_not_recorded_in_era": 152138,
+    "cells_zero_denominator": 7121,
+    "cells_unexplained": 410,
+    "by_column": {
+      "age": {
+        "n_missing": 20,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 0,
+        "unexplained": 20,
+        "last_season_with_missing": 1973
+      },
+      "pos": {
+        "n_missing": 1197,
+        "not_recorded_in_era": 875,
+        "zero_denominator": 0,
+        "unexplained": 322,
+        "last_season_with_missing": 2026
+      },
+      "gs": {
+        "n_missing": 8155,
+        "not_recorded_in_era": 8155,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1981
+      },
+      "mp": {
+        "n_missing": 1083,
+        "not_recorded_in_era": 1083,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1951
+      },
+      "fg_percent": {
+        "n_missing": 177,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 177,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "x3p": {
+        "n_missing": 6352,
+        "not_recorded_in_era": 6352,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1979
+      },
+      "x3pa": {
+        "n_missing": 6353,
+        "not_recorded_in_era": 6352,
+        "zero_denominator": 0,
+        "unexplained": 1,
+        "last_season_with_missing": 1979
+      },
+      "x3p_percent": {
+        "n_missing": 10690,
+        "not_recorded_in_era": 6353,
+        "zero_denominator": 4337,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "x2p": {
+        "n_missing": 6352,
+        "not_recorded_in_era": 6352,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1979
+      },
+      "x2pa": {
+        "n_missing": 6352,
+        "not_recorded_in_era": 6352,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1979
+      },
+      "x2p_percent": {
+        "n_missing": 6615,
+        "not_recorded_in_era": 6352,
+        "zero_denominator": 263,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "e_fg_percent": {
+        "n_missing": 6510,
+        "not_recorded_in_era": 6333,
+        "zero_denominator": 177,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "ft_percent": {
+        "n_missing": 1460,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 1460,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "orb": {
+        "n_missing": 4646,
+        "not_recorded_in_era": 4645,
+        "zero_denominator": 0,
+        "unexplained": 1,
+        "last_season_with_missing": 1973
+      },
+      "drb": {
+        "n_missing": 4646,
+        "not_recorded_in_era": 4645,
+        "zero_denominator": 0,
+        "unexplained": 1,
+        "last_season_with_missing": 1973
+      },
+      "trb": {
+        "n_missing": 894,
+        "not_recorded_in_era": 894,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1950
+      },
+      "stl": {
+        "n_missing": 5602,
+        "not_recorded_in_era": 5602,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1973
+      },
+      "blk": {
+        "n_missing": 5600,
+        "not_recorded_in_era": 5600,
+        "zero_denominator": 0,
+        "unexplained": 0,
+        "last_season_with_missing": 1973
+      },
+      "tov": {
+        "n_missing": 5636,
+        "not_recorded_in_era": 5634,
+        "zero_denominator": 0,
+        "unexplained": 2,
+        "last_season_with_missing": 1977
+      },
+      "pf": {
+        "n_missing": 1,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 0,
+        "unexplained": 1,
+        "last_season_with_missing": 1971
+      },
+      "trp_dbl": {
+        "n_missing": 5,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 0,
+        "unexplained": 5,
+        "last_season_with_missing": 2024
+      },
+      "per": {
+        "n_missing": 1101,
+        "not_recorded_in_era": 1083,
+        "zero_denominator": 7,
+        "unexplained": 11,
+        "last_season_with_missing": 2027
+      },
+      "ts_percent": {
+        "n_missing": 152,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 152,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "x3p_ar": {
+        "n_missing": 6511,
+        "not_recorded_in_era": 6333,
+        "zero_denominator": 177,
+        "unexplained": 1,
+        "last_season_with_missing": 2027
+      },
+      "f_tr": {
+        "n_missing": 177,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 177,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "orb_percent": {
+        "n_missing": 5299,
+        "not_recorded_in_era": 5292,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "drb_percent": {
+        "n_missing": 5299,
+        "not_recorded_in_era": 5292,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "trb_percent": {
+        "n_missing": 3710,
+        "not_recorded_in_era": 3703,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "ast_percent": {
+        "n_missing": 2726,
+        "not_recorded_in_era": 2719,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "stl_percent": {
+        "n_missing": 5608,
+        "not_recorded_in_era": 5601,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "blk_percent": {
+        "n_missing": 5606,
+        "not_recorded_in_era": 5599,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "tov_percent": {
+        "n_missing": 5752,
+        "not_recorded_in_era": 5636,
+        "zero_denominator": 116,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "usg_percent": {
+        "n_missing": 5642,
+        "not_recorded_in_era": 5634,
+        "zero_denominator": 7,
+        "unexplained": 1,
+        "last_season_with_missing": 2027
+      },
+      "ows": {
+        "n_missing": 11,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 0,
+        "unexplained": 11,
+        "last_season_with_missing": 1955
+      },
+      "dws": {
+        "n_missing": 11,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 0,
+        "unexplained": 11,
+        "last_season_with_missing": 1955
+      },
+      "ws": {
+        "n_missing": 11,
+        "not_recorded_in_era": 0,
+        "zero_denominator": 0,
+        "unexplained": 11,
+        "last_season_with_missing": 1955
+      },
+      "ws_48": {
+        "n_missing": 1101,
+        "not_recorded_in_era": 1083,
+        "zero_denominator": 7,
+        "unexplained": 11,
+        "last_season_with_missing": 2027
+      },
+      "obpm": {
+        "n_missing": 5653,
+        "not_recorded_in_era": 5646,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "dbpm": {
+        "n_missing": 5653,
+        "not_recorded_in_era": 5646,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "bpm": {
+        "n_missing": 5653,
+        "not_recorded_in_era": 5646,
+        "zero_denominator": 7,
+        "unexplained": 0,
+        "last_season_with_missing": 2027
+      },
+      "vorp": {
+        "n_missing": 5647,
+        "not_recorded_in_era": 5646,
+        "zero_denominator": 1,
+        "unexplained": 0,
+        "last_season_with_missing": 1973
+      }
+    }
+  },
+  "unexplained_missing_NBA_1980_2026": {
+    "pos": 1,
+    "trp_dbl": 1
+  },
+  "first_recorded_season_NBA": {
+    "mp": 1952,
+    "gs": 1982,
+    "orb": 1974,
+    "drb": 1974,
+    "stl": 1974,
+    "blk": 1974,
+    "tov": 1978,
+    "x3pa": 1980,
+    "per": 1952,
+    "usg_percent": 1978,
+    "bpm": 1974,
+    "vorp": 1974,
+    "ws": 1950
+  },
+  "exact_duplicate_rows_total": 0,
+  "traded": {
+    "n_rows_total": 33780,
+    "n_rows_combined_code": 3052,
+    "combined_codes": [
+      "2TM",
+      "3TM",
+      "4TM",
+      "5TM"
+    ],
+    "n_rows_TOT_code": 0,
+    "n_player_seasons_traded": 3052,
+    "n_rows_in_traded_groups": 9380,
+    "n_groups_without_exactly_one_combined_row": 0,
+    "n_groups_digit_mismatch": 0,
+    "n_groups_combined_games_ne_sum_of_team_games": 0,
+    "n_single_row_with_combined_code": 0
+  },
+  "n_player_seasons": 27452,
+  "traded_share_pct_by_decade": {
+    "1940": 16.1,
+    "1950": 12.5,
+    "1960": 9.8,
+    "1970": 11.1,
+    "1980": 9.3,
+    "1990": 9.5,
+    "2000": 10.6,
+    "2010": 12.8,
+    "2020": 12.3
+  },
+  "ids_with_several_names": 6,
+  "names_shared_by_several_ids": 45,
+  "player_seasons_in_two_leagues": 42,
+  "label_duplicate_keys": 0,
+  "label_rows_without_stats": [
+    {
+      "player": "Magic Johnson",
+      "season": 1992,
+      "lg": "NBA"
+    }
+  ],
+  "replaced_flag": {
+    "n_true": 184,
+    "n_nba_seasons_with_true": 59,
+    "max_true_in_one_season": 10,
+    "seasons_with_max": [
+      1997,
+      2007
+    ],
+    "names_with_trailing_nbsp": 2
+  },
+  "seasons_without_label": {
+    "BAA": [
+      1947,
+      1948,
+      1949
+    ],
+    "NBA": [
+      1950,
+      1999,
+      2027
+    ]
+  },
+  "season_2027": {
+    "n_rows": 441,
+    "max_games": 7,
+    "median_games": 5.0
+  },
+  "season_1999": {
+    "n_player_seasons": 440,
+    "n_all_star": 0
+  },
+  "labelled_seasons_in_window": {
+    "1974-2026": 52,
+    "1980-2026": 46,
+    "1997-2026": 29
+  },
+  "class_balance": {
+    "all leagues, all seasons": {
+      "n_player_seasons": 27452.0,
+      "n_positive": 2057.0,
+      "pct_positive": 7.49,
+      "n_replaced": 184.0,
+      "imbalance_ratio_neg_per_pos": 12.3,
+      "accuracy_always_predict_0_pct": 92.51
+    },
+    "NBA, all seasons": {
+      "n_player_seasons": 25760.0,
+      "n_positive": 1849.0,
+      "pct_positive": 7.18,
+      "n_replaced": 178.0,
+      "imbalance_ratio_neg_per_pos": 12.9,
+      "accuracy_always_predict_0_pct": 92.82
+    },
+    "NBA, seasons with an All-Star label": {
+      "n_player_seasons": 24656.0,
+      "n_positive": 1849.0,
+      "pct_positive": 7.5,
+      "n_replaced": 178.0,
+      "imbalance_ratio_neg_per_pos": 12.3,
+      "accuracy_always_predict_0_pct": 92.5
+    },
+    "NBA 1974-2026 (all advanced stats recorded)": {
+      "n_player_seasons": 22105.0,
+      "n_positive": 1328.0,
+      "pct_positive": 6.01,
+      "n_replaced": 143.0,
+      "imbalance_ratio_neg_per_pos": 15.6,
+      "accuracy_always_predict_0_pct": 93.99
+    },
+    "NBA 1980-2026 (3-point era)": {
+      "n_player_seasons": 20550.0,
+      "n_positive": 1182.0,
+      "pct_positive": 5.75,
+      "n_replaced": 132.0,
+      "imbalance_ratio_neg_per_pos": 16.4,
+      "accuracy_always_predict_0_pct": 94.25
+    },
+    "NBA 1997-2026 (nba_api coverage)": {
+      "n_player_seasons": 14569.0,
+      "n_positive": 758.0,
+      "pct_positive": 5.2,
+      "n_replaced": 94.0,
+      "imbalance_ratio_neg_per_pos": 18.2,
+      "accuracy_always_predict_0_pct": 94.8
+    }
+  },
+  "nba_all_stars_per_season": {
+    "min": 20,
+    "max": 30,
+    "median": 25.0
+  },
+  "nba_pct_all_star_per_season": {
+    "min": 4.46,
+    "max": 23.66,
+    "season_of_min": 2022,
+    "season_of_max": 1961
+  },
+  "n_replaced_total": 184,
+  "nba_rows_per_season": {
+    "min": 104,
+    "season_of_min": 1961,
+    "max": 812,
+    "season_of_max": 2022,
+    "n_seasons": 78
+  },
+  "drift": {
+    "1980": {
+      "pace": 103.1,
+      "x3pa_per_team_game": 2.8,
+      "x3p_attempt_rate": 0.031,
+      "pts_per_team_game": 109.3
+    },
+    "1990": {
+      "pace": 98.3,
+      "x3pa_per_team_game": 6.6,
+      "x3p_attempt_rate": 0.076,
+      "pts_per_team_game": 107.0
+    },
+    "2000": {
+      "pace": 93.1,
+      "x3pa_per_team_game": 13.7,
+      "x3p_attempt_rate": 0.167,
+      "pts_per_team_game": 97.5
+    },
+    "2010": {
+      "pace": 92.7,
+      "x3pa_per_team_game": 18.1,
+      "x3p_attempt_rate": 0.222,
+      "pts_per_team_game": 100.4
+    },
+    "2020": {
+      "pace": 100.3,
+      "x3pa_per_team_game": 34.1,
+      "x3p_attempt_rate": 0.384,
+      "pts_per_team_game": 111.8
+    },
+    "2026": {
+      "pace": 99.4,
+      "x3pa_per_team_game": 37.0,
+      "x3p_attempt_rate": 0.415,
+      "pts_per_team_game": 115.6
+    }
+  },
+  "drift_first_season_pace": 1951,
+  "leakage_counts": {
+    "SUSPECT": 361,
+    "SAFE": 94,
+    "LEAKY": 32
+  },
+  "leakage_n_columns": 487,
+  "leakage_condensed": [
+    {
+      "verdict": "LEAKY",
+      "reason_key": "career_future",
+      "n_columns": 2,
+      "files": "Player Career Info",
+      "example_columns": "to, hof"
+    },
+    {
+      "verdict": "LEAKY",
+      "reason_key": "label_meta",
+      "n_columns": 2,
+      "files": "All-Star Selections",
+      "example_columns": "team, replaced"
+    },
+    {
+      "verdict": "LEAKY",
+      "reason_key": "playoffs",
+      "n_columns": 8,
+      "files": "Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals",
+      "example_columns": "playoffs"
+    },
+    {
+      "verdict": "LEAKY",
+      "reason_key": "post_season",
+      "n_columns": 20,
+      "files": "End of Season Teams, End of Season Teams (Voting), Player Award Shares",
+      "example_columns": "type, number_tm, position, age, pts_won, pts_max"
+    },
+    {
+      "verdict": "SAFE",
+      "reason_key": "key",
+      "n_columns": 41,
+      "files": "Advanced, All-Star Selections, Draft Pick History, End of Season Teams, End of Season Teams (Voting), Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Per 100 Poss, Per 36 Minutes, Player Award Shares, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals",
+      "example_columns": "season, lg"
+    },
+    {
+      "verdict": "SAFE",
+      "reason_key": "pre_season",
+      "n_columns": 37,
+      "files": "Advanced, Draft Pick History, Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Per 100 Poss, Per 36 Minutes, Player Career Info, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals",
+      "example_columns": "age, pos, overall_pick, round, tm, college"
+    },
+    {
+      "verdict": "SAFE",
+      "reason_key": "team_code",
+      "n_columns": 16,
+      "files": "Advanced, Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Per 100 Poss, Per 36 Minutes, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals",
+      "example_columns": "team"
+    },
+    {
+      "verdict": "SUSPECT",
+      "reason_key": "attendance",
+      "n_columns": 2,
+      "files": "Team Summaries",
+      "example_columns": "attend, attend_g"
+    },
+    {
+      "verdict": "SUSPECT",
+      "reason_key": "games",
+      "n_columns": 14,
+      "files": "Advanced, Per 100 Poss, Per 36 Minutes, Player Per Game, Player Play By Play, Player Shooting, Player Totals",
+      "example_columns": "g, gs"
+    },
+    {
+      "verdict": "SUSPECT",
+      "reason_key": "identity",
+      "n_columns": 28,
+      "files": "Advanced, All-Star Selections, Draft Pick History, End of Season Teams, End of Season Teams (Voting), Per 100 Poss, Per 36 Minutes, Player Award Shares, Player Career Info, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals",
+      "example_columns": "player, player_id"
+    },
+    {
+      "verdict": "SUSPECT",
+      "reason_key": "season_stat",
+      "n_columns": 156,
+      "files": "Advanced, Per 100 Poss, Per 36 Minutes, Player Per Game, Player Play By Play, Player Shooting, Player Totals",
+      "example_columns": "mp, per, ts_percent, x3p_ar, f_tr, orb_percent"
+    },
+    {
+      "verdict": "SUSPECT",
+      "reason_key": "team_stat",
+      "n_columns": 161,
+      "files": "Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals",
+      "example_columns": "g, mp, opp_fg_per_100_poss, opp_fga_per_100_poss, opp_fg_percent, opp_x3p_per_100_poss"
+    }
+  ],
+  "generated_by": "notebooks/01_dataset_audit.ipynb",
+  "versions": {
+    "python": "3.14.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.5"
+  }
+}

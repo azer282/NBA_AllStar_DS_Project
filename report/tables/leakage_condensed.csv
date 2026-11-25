@@ -1,0 +1,13 @@
+verdict,reason_key,n_columns,files,example_columns
+LEAKY,career_future,2,Player Career Info,"to, hof"
+LEAKY,label_meta,2,All-Star Selections,"team, replaced"
+LEAKY,playoffs,8,"Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals",playoffs
+LEAKY,post_season,20,"End of Season Teams, End of Season Teams (Voting), Player Award Shares","type, number_tm, position, age, pts_won, pts_max"
+SAFE,key,41,"Advanced, All-Star Selections, Draft Pick History, End of Season Teams, End of Season Teams (Voting), Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Per 100 Poss, Per 36 Minutes, Player Award Shares, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals","season, lg"
+SAFE,pre_season,37,"Advanced, Draft Pick History, Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Per 100 Poss, Per 36 Minutes, Player Career Info, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals","age, pos, overall_pick, round, tm, college"
+SAFE,team_code,16,"Advanced, Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Per 100 Poss, Per 36 Minutes, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals, Team Abbrev, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals",team
+SUSPECT,attendance,2,Team Summaries,"attend, attend_g"
+SUSPECT,games,14,"Advanced, Per 100 Poss, Per 36 Minutes, Player Per Game, Player Play By Play, Player Shooting, Player Totals","g, gs"
+SUSPECT,identity,28,"Advanced, All-Star Selections, Draft Pick History, End of Season Teams, End of Season Teams (Voting), Per 100 Poss, Per 36 Minutes, Player Award Shares, Player Career Info, Player Per Game, Player Play By Play, Player Season Info, Player Shooting, Player Totals","player, player_id"
+SUSPECT,season_stat,156,"Advanced, Per 100 Poss, Per 36 Minutes, Player Per Game, Player Play By Play, Player Shooting, Player Totals","mp, per, ts_percent, x3p_ar, f_tr, orb_percent"
+SUSPECT,team_stat,161,"Opponent Stats Per 100 Poss, Opponent Stats Per Game, Opponent Totals, Team Stats Per 100 Poss, Team Stats Per Game, Team Summaries, Team Totals","g, mp, opp_fg_per_100_poss, opp_fga_per_100_poss, opp_fg_percent, opp_x3p_per_100_poss"

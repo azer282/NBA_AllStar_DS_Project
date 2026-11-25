@@ -1,0 +1,45 @@
+{
+  "_provenance": "Transcribed by hand from the Step 2 verification outputs of 2026-11-25 (see report/step2_dataset_selection.md). Not produced by a notebook: re-check before final submission.",
+  "checked_on": "2026-11-25",
+  "candidates": [
+    {
+      "id": "A",
+      "name": "Kaggle sumitrodatta/nba-aba-baa-stats",
+      "url": "https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats",
+      "licence": "CC0: Public Domain (Kaggle metadata); data scraped from Basketball-Reference",
+      "download": "1 HTTP request, pinned version 57, SHA-256 checked; no API key needed on 2026-11-25",
+      "seasons": "1947-2027 (NBA from 1950; 3-point stats from 1980)",
+      "label": "Included (All-Star Selections.csv), with a 'replaced' flag",
+      "advanced_stats": "PER, TS%, USG%, WS, BPM, VORP, ...",
+      "stats_to_all_star_break": "No (full-season aggregates only)"
+    },
+    {
+      "id": "B",
+      "name": "nba_api 1.12.0 (stats.nba.com)",
+      "url": "https://pypi.org/project/nba_api/",
+      "licence": "Package MIT; NBA.com terms of use NOT verified",
+      "download": "1 API call per season (LeagueDashPlayerStats)",
+      "seasons": "1996-97 onwards (1995-96 returned 0 rows)",
+      "label": "Only per player (PlayerAwards), thousands of calls",
+      "advanced_stats": "TS%, USG%, PIE, pace, net rating; no PER/WS/BPM/VORP",
+      "stats_to_all_star_break": "Yes: DateTo filter (2023-24 to 02/15/2024 gave max 56 games)"
+    },
+    {
+      "id": "C",
+      "name": "Basketball-Reference (direct scraping)",
+      "url": "https://www.basketball-reference.com",
+      "licence": "Terms of use page returned HTTP 403 to automated clients: NOT verified",
+      "download": "1 page per season and table; robots.txt Crawl-delay: 3",
+      "seasons": "All",
+      "label": "1 All-Star page per season",
+      "advanced_stats": "All",
+      "stats_to_all_star_break": "Yes, but ~1 page per player-season (splits 'Pre All-Star' row or game logs), ~12 h for 30 seasons"
+    }
+  ],
+  "label_crosschecks": [
+    "2024: Kaggle label rows = 24 Basketball-Reference roster players + 2 injured selections (Embiid, Randle) flagged replaced=True",
+    "2007: Basketball-Reference lists 5 injured selections and their 5 replacements; all 10 have replaced=True in Kaggle",
+    "LeBron James: 22 All-Star seasons 2005-2026 in Kaggle, identical to NBA.com PlayerAwards"
+  ],
+  "nba_api_example": {"season": "2023-24", "date_to": "02/15/2024", "players": 540, "max_games": 56}
+}

@@ -1,0 +1,68 @@
+table,column,n_missing,pct_missing
+Player Per Game,age,20,0.06
+Player Per Game,pos,1197,3.54
+Player Per Game,gs,8178,24.21
+Player Per Game,mp_per_game,1083,3.21
+Player Per Game,fg_percent,177,0.52
+Player Per Game,x3p_per_game,6352,18.8
+Player Per Game,x3pa_per_game,6353,18.81
+Player Per Game,x3p_percent,10690,31.65
+Player Per Game,x2p_per_game,6352,18.8
+Player Per Game,x2pa_per_game,6352,18.8
+Player Per Game,x2p_percent,6615,19.58
+Player Per Game,e_fg_percent,6510,19.27
+Player Per Game,ft_percent,1460,4.32
+Player Per Game,orb_per_game,4646,13.75
+Player Per Game,drb_per_game,4646,13.75
+Player Per Game,trb_per_game,894,2.65
+Player Per Game,stl_per_game,5602,16.58
+Player Per Game,blk_per_game,5600,16.58
+Player Per Game,tov_per_game,5636,16.68
+Player Per Game,pf_per_game,1,0.0
+Player Totals,age,20,0.06
+Player Totals,pos,1197,3.54
+Player Totals,gs,8155,24.14
+Player Totals,mp,1083,3.21
+Player Totals,fg_percent,177,0.52
+Player Totals,x3p,6352,18.8
+Player Totals,x3pa,6353,18.81
+Player Totals,x3p_percent,10690,31.65
+Player Totals,x2p,6352,18.8
+Player Totals,x2pa,6352,18.8
+Player Totals,x2p_percent,6615,19.58
+Player Totals,e_fg_percent,6510,19.27
+Player Totals,ft_percent,1460,4.32
+Player Totals,orb,4646,13.75
+Player Totals,drb,4646,13.75
+Player Totals,trb,894,2.65
+Player Totals,stl,5602,16.58
+Player Totals,blk,5600,16.58
+Player Totals,tov,5636,16.68
+Player Totals,pf,1,0.0
+Player Totals,trp_dbl,5,0.01
+Advanced,age,20,0.06
+Advanced,pos,1197,3.54
+Advanced,gs,8155,24.14
+Advanced,mp,1083,3.21
+Advanced,per,1101,3.26
+Advanced,ts_percent,152,0.45
+Advanced,x3p_ar,6511,19.27
+Advanced,f_tr,177,0.52
+Advanced,orb_percent,5299,15.69
+Advanced,drb_percent,5299,15.69
+Advanced,trb_percent,3710,10.98
+Advanced,ast_percent,2726,8.07
+Advanced,stl_percent,5608,16.6
+Advanced,blk_percent,5606,16.6
+Advanced,tov_percent,5752,17.03
+Advanced,usg_percent,5642,16.7
+Advanced,ows,11,0.03
+Advanced,dws,11,0.03
+Advanced,ws,11,0.03
+Advanced,ws_48,1101,3.26
+Advanced,obpm,5653,16.73
+Advanced,dbpm,5653,16.73
+Advanced,bpm,5653,16.73
+Advanced,vorp,5647,16.72
+Player Season Info,age,20,0.06
+Player Season Info,pos,1197,3.54
