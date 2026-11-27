@@ -1,0 +1,4 @@
+,test_pr_auc,test_hits_at_k
+trained 1981-2000,0.668,0.6183
+trained 1981-2017,0.6859,0.6017
+trained 2001-2017 (recent only),0.6781,0.6017

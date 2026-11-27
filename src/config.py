@@ -40,6 +40,22 @@ RAW_MANIFEST_PATH = PROJECT_ROOT / "data" / "raw_manifest.json"
 TARGET_COL = "all_star"  # binary target: 1 = selected as All-Star that season
 
 # ---------------------------------------------------------------------------
+# Week 2 decisions (proposed defaults, to be confirmed by the team)
+# ---------------------------------------------------------------------------
+# D4: target seasons. 1981 is the first season whose previous season (1980) has
+# 3-point statistics. Seasons without a label (1999 lockout) are dropped automatically.
+FIRST_TARGET_SEASON = 1981
+LAST_TARGET_SEASON = 2026  # 2027 is in progress and has no label yet
+
+# Temporal split by TARGET season (never random): the model is always evaluated on
+# seasons that come after the ones it learned from.
+TRAIN_LAST_SEASON = 2010        # train: 1981-2010
+VALIDATION_LAST_SEASON = 2017   # validation: 2011-2017 (model and threshold selection)
+# test: 2018-2026, touched once at the very end
+
+N_BOOTSTRAP = 1000  # resamples for the 95% confidence intervals
+
+# ---------------------------------------------------------------------------
 # Figures
 # ---------------------------------------------------------------------------
 FIGURE_DPI = 150  # resolution of saved figures (readable when embedded in the PDF)

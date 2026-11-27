@@ -1,0 +1,4 @@
+set,seasons,n_seasons,rows,all_stars,positive_rate
+train,1981-2010,29,11482,738,0.0643
+validation,2011-2017,7,3335,179,0.0537
+test,2018-2026,9,5006,241,0.0481

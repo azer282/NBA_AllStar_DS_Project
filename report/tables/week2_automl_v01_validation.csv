@@ -1,0 +1,5 @@
+model,best_params,validation_pr_auc
+logistic_regression,"{'model__C': 0.01, 'select__k': 'all'}",0.7532603712359897
+knn,"{'model__n_neighbors': 150, 'model__weights': 'distance', 'select__k': 'all'}",0.7344054782294803
+decision_tree,"{'model__max_depth': 8, 'model__min_samples_leaf': 50, 'select__k': 'all'}",0.6662120764077917
+svm_rbf,"{'model__C': 0.1, 'model__gamma': 0.01, 'select__k': 15}",0.6608423894005269
